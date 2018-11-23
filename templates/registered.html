@@ -1,0 +1,31 @@
+{% extends 'layout.html'%}
+
+{% block content%}
+<body>
+  <div class="container">
+    <table class="table">
+      <thead>
+    <tr>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Confirm password</th>
+        <th>Phone Number</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for registered in registered %}
+      <tr>
+        <td>{{registered.username}}</td>
+        <td>{{registered.name}} </td>
+        <td>{{registered.course}}</td>
+        <td>{{registered.age}}</td>
+        <td><a href="/registered/edit/{{registered.id}}">Edit</a></td>
+      </tr>
+      {% endfor %}
+
+    </tbody>
+
+    </table>
+  </div>
+</body>
+{% endblock %}

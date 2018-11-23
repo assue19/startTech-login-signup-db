@@ -1,0 +1,29 @@
+{% extends 'layouts.html'%}
+{% block content%}
+
+<body>
+<table class="table">
+  <thead>
+    <tr>
+    <tr>Name</tr><br>
+
+  <div class="container">
+
+  <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" name="email" id="email" class="form-control" placeholder="Email address" required autofocus>
+
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="password" id="password" class="form-control" placeholder="Password" required>
+
+        <input type="confirm password" name="confirm password" id="confirm password" class="form-control" placeholder="Confirm password" required autofocus>
+
+        <label for="inputVerification" class="sr-only">Verification</label>
+        <input type="verification" name="verification" id="verification" class="form-control" placeholder="Verification" required>
+  </div>
+ 
+</table>
+ <a href="{{url_for('sign')}}"> <button type="button" name="button">Save</button></a>
+
+</body>
+
+{%endblock%}
